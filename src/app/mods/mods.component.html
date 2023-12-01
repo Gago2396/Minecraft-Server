@@ -1,0 +1,31 @@
+<div class="mods-container">
+  <h1>MODS</h1>
+
+  <div class="upload-section">
+    <input type="file" name="file" (change)="onFileSelected($event)" />
+    <ion-button color="primary" (click)="onUpload()"><mat-icon>cloud_upload</mat-icon>Subir Mod</ion-button>
+  </div>
+
+  <div class="mods-list-container">
+    <div class="mods-list">
+      <div *ngFor="let archivo of archivos" class="archivo-item">
+        <div class="archivo-util">
+          <div class="mod">
+            {{ archivo }}
+          </div>
+          <div class="archivo-buttons">
+            <button class="download-button" (click)="onDownload(archivo)">
+              <mat-icon>cloud_download</mat-icon>
+            </button>
+            <button class="delete-button" (click)="onDelete(archivo)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ion-button class="download-all-button" (click)="onDownloadAll()"><mat-icon>cloud_download</mat-icon>Descargar todos
+    los mods</ion-button>
+
+</div>

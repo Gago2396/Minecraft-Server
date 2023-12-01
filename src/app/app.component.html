@@ -1,0 +1,26 @@
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="isLoggedIn">
+    <a href="/home" class="navbar-brand">Minecraft Server</a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <!-- <li class="nav-item">
+        <a href="/home" class="nav-link" routerLink="home">Inicio</a>
+      </li> -->
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link" *ngIf="isLoggedIn">Panel Admin</a>
+      </li>
+      <li class="nav-item">
+        <a href="/mods" class="nav-link" *ngIf="isLoggedIn" >Mods</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">Cerrar Sesión</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

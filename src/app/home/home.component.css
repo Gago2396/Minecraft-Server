@@ -1,0 +1,174 @@
+.contenedor {
+  margin: 30px;
+  height: 85vh;
+  overflow-y: auto;
+}
+
+.tarjetas-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .tarjetas-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.tarjeta {
+  flex: 1;
+  margin-right: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  height: 85vh;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.bots-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.bot-image {
+  max-width: 40%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.bot-image:hover {
+  transform: scale(1.05);
+}
+
+.bot-seleccionado {
+  transform: scale(1.1);
+}
+
+.separador {
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.botones-acciones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.first-row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.estado-container {
+  width: 100%;
+}
+
+.card-estado {
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.en-linea {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.fuera-de-linea {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.icono-estado {
+  height: 30px;
+  width: 30px;
+}
+
+.mensaje-estado {
+  font-size: 30px;
+}
+
+.jugadores-container {
+  margin-top: 20px;
+}
+
+.jugador {
+  font-size: 18px;
+  padding: 5px;
+}
+
+.columna {
+  display: flex;
+}
+
+.columna ion-input {
+  width: 80%;
+  font-size: large;
+}
+
+ion-loading.custom-loading {
+  --background: #053897;
+  --background: #e3edff;
+}
+
+.server-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.server-button {
+  width: 45%;
+}
+
+ion-button.green-button {
+  --background: #4caf50;
+  --background-hover: #2b742e;
+  --background-activated: #2b742e;
+  --background-focused: #2b742e;
+}
+
+ion-button mat-icon {
+  margin-right: 10px;
+}
+
+.lugar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height:35%;
+}
+
+.lugar h2{
+  min-height: 10%;
+}
+
+.coordenadas{
+  display: flex;
+  flex-direction: column;
+  min-height: 60%;
+}
+
+.botones-acciones{
+  min-height: 30%;
+}

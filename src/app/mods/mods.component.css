@@ -1,0 +1,146 @@
+.mods-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 85vh;
+}
+
+h1 {
+  margin-left: 0;
+  font-size: 28px;
+  color: #333;
+}
+
+.upload-section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-section ion-button {
+  margin-top: 15px;
+}
+
+.upload-section ion-button mat-icon{
+  margin-right: 15px;
+}
+
+
+.mods-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.archivo-item {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.archivo-item:hover {
+  background-color: #e0e0e0;
+}
+
+.archivo-item.selected {
+  background-color: #d9edf7;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4285f4;
+  color: #fff;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3c74d1;
+}
+
+.archivo-item.selected {
+  background-color: #d9edf7;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.archivo-util {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mod{
+  width: 60%;
+}
+
+.archivo-buttons{
+  width: 40%;
+  display: flex;
+  justify-content: end;
+}
+
+.download-button,
+.delete-button {
+  padding: 8px;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.download-button {
+  background-color: #4285f4;
+  color: #fff;
+}
+
+.delete-button {
+  background-color: #f44242;
+  color: #fff;
+}
+
+.download-button:hover {
+  background-color: #3c74d1;
+}
+
+.delete-button:hover {
+  background-color: #791818;
+}
+
+ion-button.download-all-button {
+  --background: #4caf50;
+  --background-hover: #2b742e;
+  --background-activated: #2b742e;
+  --background-focused: #2b742e;
+  width: 100%;
+}
+
+ion-button.download-all-button mat-icon{
+  margin-right: 15px;
+}
+
+.mods-list-container {
+  max-height: 450px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 10px;
+}

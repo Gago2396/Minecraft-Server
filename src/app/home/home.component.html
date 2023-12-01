@@ -1,0 +1,93 @@
+<div class="contenedor">
+  <div class="tarjetas-container">
+    <div class="tarjeta">
+      <div class="titulo">
+        <h2>SERVIDOR</h2>
+      </div>
+      <div class="separador"></div>
+      <div class="estado-container">
+        <!-- Tu barra de estado y botones de iniciar/apagar aquí -->
+        <mat-card class="card-estado" [ngClass]="{'en-linea': estadoServidor, 'fuera-de-linea': !estadoServidor}">
+          <mat-card-content class="content">
+            <mat-icon class="icono-estado">{{ estadoServidor ? 'check_circle' : 'cancel' }}</mat-icon>
+            <span class="mensaje-estado">{{ estadoServidor ? 'En línea' : 'Fuera de línea' }}</span>
+          </mat-card-content>
+        </mat-card>
+        <div class="server-buttons">
+          <ion-button class="server-button" color="primary" (click)="iniciarServidor()">
+            <mat-icon>play_arrow</mat-icon>
+            Iniciar Servidor
+          </ion-button>
+          <ion-button class="server-button" color="danger" (click)="apagarServidor()">
+            <mat-icon>stop</mat-icon>
+            Apagar Servidor
+          </ion-button>
+        </div>
+        <ion-button class="green-button server-button" (click)="recargar()" style="margin-bottom: 20px;">
+          <mat-icon>refresh</mat-icon>
+          Recargar Estado
+        </ion-button>
+      </div>
+      <div class="separador"></div>
+    </div>
+
+    <div class="tarjeta">
+      <div class="titulo">
+        <h2>JUGADORES</h2>
+      </div>
+      <div class="separador"></div>
+      <div class="jugadores-container">
+        <p>Jugadores conectados:</p>
+        <ion-list>
+          <ion-item *ngFor="let jugador of jugadores" class="jugador">{{ jugador }}</ion-item>
+        </ion-list>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <div class="titulo">
+        <h2>BOTS</h2>
+      </div>
+      <div class="separador"></div>
+      <div class="bots-container">
+        <img [src]="'../../assets/' + imagenSteve" alt="Steve" class="bot-image"
+          [ngClass]="{'bot-seleccionado': botSeleccionado === 'steve'}" (click)="seleccionarBot('steve')">
+        <img [src]="'../../assets/' + imagenAlex" alt="Alex" class="bot-image"
+          [ngClass]="{'bot-seleccionado': botSeleccionado === 'alex'}" (click)="seleccionarBot('alex')">
+      </div>
+
+      <div class="separador"></div>
+
+      <div class="lugar">
+        <h2>Lugar:</h2>
+
+        <div class="coordenadas">
+
+          <ion-grid *ngIf="custom">
+            <ion-row>
+              <ion-col class="columna" size="4">
+                <ion-input aria-label="Primary input" color="primary" label="X: " fill="solid" [(ngModel)]="coordenadaX"
+                  type="number"></ion-input>
+              </ion-col>
+              <ion-col class="columna" size="4">
+                <ion-input aria-label="Primary input" color="primary" label="Y: " fill="solid" [(ngModel)]="coordenadaY"
+                  type="number"></ion-input>
+              </ion-col>
+              <ion-col class="columna" size="4">
+                <ion-input aria-label="Primary input" color="primary" label="Z: " fill="solid" [(ngModel)]="coordenadaZ"
+                  type="number"></ion-input>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+
+        <div class="botones-acciones">
+          <ion-button (click)="addBot()" color="primary">Añadir</ion-button>
+          <ion-button (click)="quitBot()" color="danger">Quitar</ion-button>
+          <ion-button class="green-button" (click)="moveBot()">Mover</ion-button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

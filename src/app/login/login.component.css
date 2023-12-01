@@ -1,0 +1,65 @@
+
+
+#titulo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 500;
+    font-size: 20pt;
+    margin-top: 30px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(27, 27, 27);
+    width: 100vw;
+    height: 100vh;
+}
+
+#card-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(85, 85, 85);
+    width: 370px;
+    height: 310px;
+    border-radius: 12px;
+    max-width: 80vw;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+input{
+    border-radius: 5px;
+    height: 32px;
+    background-color: rgb(27, 27, 27);
+    border: 0;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: rgb(27, 27, 27);
+}
+
+label{
+    margin-left: 5px;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+#login-btn{
+    background-color: rgb(27, 27, 27);
+    color: white;
+    width: 40%;
+}
